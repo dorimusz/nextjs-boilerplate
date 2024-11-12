@@ -12,7 +12,6 @@ const NavBarLogo: React.FC = (): JSX.Element => {
   return (
     <Link href="/" className={styles.navLogo}>
       <Image
-        className="companyLogo"
         src="https://cdn.pixabay.com/photo/2023/03/06/13/58/brand-7833518_1280.png"
         alt="CompanyLogo"
         width={100}

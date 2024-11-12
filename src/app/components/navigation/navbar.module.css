@@ -1,46 +1,80 @@
 .navbar {
   position: fixed;
-  width: 100%;
   top: 0;
-  background-color: brown;
   z-index: 1000; /*  z-index is used to specify the stack order of an element */
+  background-color: brown;
+
+  width: 100%;
+  height: 12vh;
 
   display: flex;
-  flex-direction: row;
-  height: max-content;
-}
-
-.navlist {
-  padding-left: 30px;
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 3vw;
+
+  margin: 0;
+  padding: 0 40px;
 }
 
-.navitem:hover {
-  opacity: 0.7;
+.menuContainer {
+  display: flex;
+  flex: wrap;
+  width: 100%;
+  max-width: 1800px;
+  height: 9vh;
+}
+
+.leftMenu {
+  display: flex;
+  flex: 1 1 auto;
+  width: 40% !important;
+  float: left;
+  background-color: cadetblue;
+  min-height: 20px;
+}
+
+.centerMenu {
+  display: flex;
+  flex: 1 1 auto;
+  width: 8%;
+  background-color: yellow;
+  padding: 0 20px;
+}
+
+.rightMenu {
+  display: flex;
+  flex: 1 1 auto;
+  width: 35%;
+  background-color: purple;
+  min-height: 20px;
+}
+
+.centerMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftMenu,
+.rightMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* .closingItem {
+  width: 1% !important;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 20px;
+  background-color: rosybrown;
+} */
+
+.navItem {
+  font-size: 1.5rem;
+  margin: 10px;
 }
 
 .navLogo {
-  margin: 0 20px;
-  padding: 10px 0;
-}
-
-.buttoncontainer {
-  margin-left: auto; /* Pushes the button to the right */
-  padding-right: 2vw;
-  color: white;
-  justify-self: end;
   display: flex;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-}
-
-.navbutton {
-  background-color: rgb(216, 97, 97);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  align-items: center;
 }

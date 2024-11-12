@@ -1,33 +1,42 @@
 import React from 'react';
 import { navigationLinkType } from '@/app/types/navigation';
-import Link from 'next/link';
-import NavBarLogo from './NavBarLogo';
+import NavItem from './NavItem';
+import NavLogo from './NavLogo';
 import styles from './navbar.module.css';
 
 const NavBar: React.FC = () => {
-  const links: navigationLinkType[] = [
+  const leftLinks: navigationLinkType[] = [
     { href: '/menu', label: 'Menu' },
     { href: '/contact', label: 'Contact' },
+  ];
+
+  const rightLinks: navigationLinkType[] = [
     { href: '/about', label: 'About us' },
     { href: '/', label: 'Tüttürüü' },
   ];
 
   return (
-    <nav className={styles.navbar}>
-      <NavBarLogo />
+    <div className={styles.navbar}>
+      <div className={styles.menuContainer}>
+        <div className={styles.leftMenu}>
+          {leftLinks.map((left, index) => (
+            <NavItem href={left.href} label={left.label} key={index} />
+          ))}
+        </div>
 
-      <ul className={styles.navlist}>
-        {links.map((link, index) => (
-          <li key={index} className={styles.navitem}>
-            <Link href={link.href}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
+        <div className={styles.centerMenu}>
+          <NavLogo />
+        </div>
 
-      <div className={styles.buttoncontainer}>
-        <button className={styles.navbutton}>Test button</button>
+        <div className={styles.rightMenu}>
+          {rightLinks.map((right, index) => (
+            <NavItem href={right.href} label={right.label} key={index} />
+          ))}
+        </div>
+        {/* <div className={styles.closingItem}></div> */}
+
       </div>
-    </nav>
+    </div>
   );
 };
 
