@@ -1,16 +1,16 @@
 import React from 'react';
-import { navigationLinkType } from '@/app/types/navigation';
+import { LabeledLinkType } from '@/app/types/global';
 import NavItem from './NavItem';
 import NavLogo from './NavLogo';
 import styles from './navbar.module.css';
 
 const NavBar: React.FC = () => {
-  const leftLinks: navigationLinkType[] = [
+  const leftLinks: LabeledLinkType[] = [
     { href: '/menu', label: 'Menu' },
     { href: '/contact', label: 'Contact' },
   ];
 
-  const rightLinks: navigationLinkType[] = [
+  const rightLinks: LabeledLinkType[] = [
     { href: '/about', label: 'About us' },
     { href: '/', label: 'Tüttürüü' },
   ];
@@ -34,7 +34,6 @@ const NavBar: React.FC = () => {
           ))}
         </div>
         {/* <div className={styles.closingItem}></div> */}
-
       </div>
     </div>
   );
