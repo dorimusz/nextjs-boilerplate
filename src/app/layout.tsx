@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import NavBar from './components/navigation/NavBar';
 import Footer from './components/footer/Footer';
-import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
 /*
@@ -34,13 +33,6 @@ const geistMono = localFont({
          ${MonaSans_Font.className}>
 */
 
-// Dynamic Import: The dynamic function is used to import the AppThemeProvider component dynamically. If you want to disable pre-rendering for a Client Component, you can use the ssr option set to false
-// SSR Disabled: The ssr: false option ensures that the AppThemeProvider component is only rendered on the client side, not on the server. This is useful for components that rely on client-side state or browser-specific APIs.
-const AppThemeProvider = dynamic(() => import('./providers/theme'), {
-  ssr: false,
-});
-// Implementing a Theme Provider in Next.js 14+ without wrapping children in Context offers a cleaner and more efficient way to manage themes in your application without making complete application a client component
-
 export const metadata: Metadata = {
   title: 'Add site title here',
   description: 'Add a description here',
@@ -63,7 +55,6 @@ export default function RootLayout({
       style={theme !== 'system' ? { colorScheme: theme } : {}}
     >
       <body>
-        <AppThemeProvider attribute="class" defaultTheme={theme} enableSystem />
         <NavBar />
         {children}
         <Footer />
