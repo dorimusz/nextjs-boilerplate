@@ -1,0 +1,61 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: greenyellow;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* margin: 0 auto; */
+  background-color: lightblue;
+  padding: 3rem 0 0 3rem;
+
+  width: 80%;
+
+  /* gap: 30px; */
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: lightcoral;
+  min-height: 250px;
+}
+
+.description {
+  background-color: brown;
+  width: 100%;
+
+  display: flex;
+}
+
+.image {
+  background-color: yellow;
+  width: 70%;
+}
+.input,
+.message {
+  width: 90%;
+  margin: 2rem 0 0 0;
+  /* padding: 0.5rem; */
+  border-bottom: 1px solid black;
+}
+
+.message {
+  height: 5rem;
+  place-content: end;
+}
+
+.error {
+  height: 1.5rem;
+  color: red;
+  width: 80%;
+}
