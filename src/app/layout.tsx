@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import NavBar from './components/navigation/NavBar';
 import Footer from './components/footer/Footer';
-import { cookies } from 'next/headers';
+import AllSectionsContainer from './components/container/AllSectionsContainer';
 
 /*
 //Importing Google Fonts.
@@ -43,20 +43,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
-  console.log('cookieStore', cookieStore);
-  const theme = cookieStore.get('theme')?.value || 'system';
-  console.log('theme', theme);
-
   return (
-    <html
-      lang="en"
-      className={theme}
-      style={theme !== 'system' ? { colorScheme: theme } : {}}
-    >
+    <html lang="en">
       <body>
         <NavBar />
-        {children}
+        <AllSectionsContainer>{children}</AllSectionsContainer>
         <Footer />
       </body>
     </html>
