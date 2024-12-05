@@ -1,0 +1,17 @@
+.h1 {
+  color: palevioletred;
+}
+
+.h2 {
+  color: rgb(143, 112, 216);
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.h3 {
+  color: rgb(112, 18, 50);
+}
+
+.h4 {
+  color: rgb(15, 119, 55);
+}
