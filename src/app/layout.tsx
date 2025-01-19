@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import NavBar from './components/navigation/NavBar';
 import Footer from './components/footer/Footer';
-import AllSectionsContainer from './components/container/AllSectionsContainer';
+import MainSectionContainer from './components/container/MainSectionContainer';
 
 /*
 //Importing Google Fonts.
@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <NavBar />
-        <AllSectionsContainer>{children}</AllSectionsContainer>
+        <MainSectionContainer>{children}</MainSectionContainer>
         <Footer />
       </body>
     </html>

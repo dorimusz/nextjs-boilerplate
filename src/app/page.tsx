@@ -1,8 +1,10 @@
 import styles from './page.module.css';
 import ContactForm from './components/form/ContactForm';
+import HeroSection from './components/hero/HeroSection';
 export default function Home() {
   return (
     <>
+      <HeroSection />
       <ContactForm />
       <p>
         Get started by editing{' '}

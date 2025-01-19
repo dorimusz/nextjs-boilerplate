@@ -1,10 +1,14 @@
 import React from 'react';
-import styles from './container.module.css';
-import { NodeChildrenProps } from '../../types/global';
+import { SectionContainerProps } from '../../types/global';
+import { Container } from './Container.styles';
 
 // Container for only one section, added to the component itself. Footer & navigation are not included in this container.
-const SectionContainer: React.FC<NodeChildrenProps> = ({ children }) => {
-  return <div className={styles.sectionContainer}>{children}</div>;
+// In case of using styled-components, the style could be added directly to the component.
+const SectionContainer: React.FC<SectionContainerProps> = ({
+  children, // hydration fail?
+  fullWidth,
+}) => {
+  return <Container fullWidth={fullWidth}>{children}</Container>;
 };
 
 export default SectionContainer;

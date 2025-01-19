@@ -18,3 +18,8 @@ export type HeadingProps = {
   text: string;
   type: 'h1' | 'h2' | 'h3' | 'h4';
 };
+
+export type SectionContainerProps = {
+  children: React.ReactNode;
+  fullWidth?: boolean;
+};
