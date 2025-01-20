@@ -21,5 +21,5 @@ export type HeadingProps = {
 
 export type SectionContainerProps = {
   children: React.ReactNode;
-  fullWidth?: boolean;
+  $fullWidth?: boolean;
 };

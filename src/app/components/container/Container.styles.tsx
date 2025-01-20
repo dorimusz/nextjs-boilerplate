@@ -1,6 +1,11 @@
 'use client';
 import styled from 'styled-components';
 
+type ContainerProps = {
+  $fullWidth?: boolean;
+  $background?: string;
+};
+
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
@@ -19,11 +24,11 @@ const MainContainer = styled.main`
   background-color: aquamarine;
 `;
 
-const Container = styled.div<{ fullWidth?: boolean }>`
+const Container = styled.div<ContainerProps>`
   height: ${(props) =>
-    props.fullWidth ? '100vh' : 'max-content'}; // TODO: fit content
-  background-color: ${(props) => (props.fullWidth ? 'chartreuse' : 'red')};
-  width: ${(props) => (props.fullWidth ? '100vw' : '95%')};
+    props.$fullWidth ? '100vh' : 'max-content'}; // TODO: fit content
+  background-color: ${(props) => (props.$fullWidth ? 'chartreuse' : 'red')};
+  width: ${(props) => (props.$fullWidth ? '100vw' : '95%')};
   padding: 0 5px;
 `;
 
