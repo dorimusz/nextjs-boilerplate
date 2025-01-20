@@ -3,6 +3,7 @@ import './globals.css';
 import NavBar from './components/navigation/NavBar';
 import Footer from './components/footer/Footer';
 import MainSectionContainer from './components/container/MainSectionContainer';
+import StyledComponentsRegistry from './lib/registry';
 
 /*
 //Importing Google Fonts.
@@ -46,9 +47,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar />
-        <MainSectionContainer>{children}</MainSectionContainer>
-        <Footer />
+        <StyledComponentsRegistry>
+          <NavBar />
+          <MainSectionContainer>{children}</MainSectionContainer>
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
