@@ -1,3 +1,6 @@
+// Was used before styled-components were added to the project. Now its just left as a reference.
+
+/*
 import React from 'react';
 import { SectionContainerProps } from '../../types/global';
 import { Container } from './Container.styles';
@@ -12,3 +15,4 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
 };
 
 export default SectionContainer;
+*/

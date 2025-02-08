@@ -24,7 +24,7 @@ const MainContainer = styled.main`
   background-color: aquamarine;
 `;
 
-const Container = styled.div<ContainerProps>`
+const SectionContainer = styled.div<ContainerProps>`
   height: ${(props) =>
     props.$fullWidth ? '100vh' : 'max-content'}; // TODO: fit content
   background-color: ${(props) => (props.$fullWidth ? 'chartreuse' : 'red')};
@@ -32,4 +32,20 @@ const Container = styled.div<ContainerProps>`
   padding: 0 5px;
 `;
 
-export { Container, MainContainer };
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1450px;
+  height: fit-content;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 90px;
+`;
+
+export { SectionContainer, MainContainer, Container };

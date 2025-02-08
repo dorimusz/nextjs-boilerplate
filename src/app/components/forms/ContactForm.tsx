@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './contactform.module.css';
-import SectionContainer from '../container/SectionContainer';
+import { SectionContainer } from '../container/Container.styles';
 import { useFormik } from 'formik';
 import { z } from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
